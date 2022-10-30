@@ -6,8 +6,7 @@ class User < ApplicationRecord
 
   validates_presence_of :first_name, :last_name, :phone_number, :username, 
   #validates :email_address, presence: true, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/
-  number_regex = /\d[0-9]\)*\z/
-  validates_format_of :phone_number, with: number_regex
+  #number_regex = /\d[0-9]\)*\z/
   validates :email_address, uniqueness: true
   #REGEX = /A\(?[\d]{3}\)?[\s|-]?[\d]{3}-?[\d]{4}Z/
   validates :phone_number, presence: true, length: { is: 10 }
