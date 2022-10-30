@@ -37,7 +37,7 @@ RSpec.describe User, type: :model do
     expect(subject.phone_number).to eq(10)
   end
 
-  describe 'associations' do 
-    it { expect(subject).to have_many(:parcels)}
+  describe 'associations' do
+    it { expect(subject).to have_many(:parcels) }
   end
 end
