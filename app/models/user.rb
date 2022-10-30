@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # belongs_to :order, optional: true
 
   validates_presence_of :first_name, :last_name, :phone_number, :username, 
-  validates :email_address, presence: true, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/
+  #validates :email_address, presence: true, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/
   number_regex = /\d[0-9]\)*\z/
   validates_format_of :phone_number, with: number_regex
   validates :email_address, uniqueness: true
