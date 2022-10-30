@@ -13,4 +13,16 @@ RSpec.describe User, type: :model do
   it 'is invalid with an alternate phone number that is also that user\'s primary phone' do
     expect(FactoryGirl.build(:user, phone_number: '123-456-7890').save).to be_falsey
   end
+
+  it 'email address must be unique' do
+    User.new(username: 'example', email_address: 'example@gmail.com').save
+    user2 = User.new(username: 'exam', email_address: 'example@gmail.com').save
+    expect(user2).to eq(false)
+  end
+
+  it 'username must be unique' do 
+    User.new(username: 'example', email_address: 'example@gmail.com').save
+    user2 = User.new(username: 'example', email_address: 'example@gmail.com').save
+    expect(user2).to eq(false)
+  end
 end
