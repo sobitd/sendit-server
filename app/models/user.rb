@@ -4,8 +4,8 @@ class User < ApplicationRecord
             presence: true
 
   validates :email_address, uniqueness: true
-  REGEX = /A\(?[\d]{3}\)?[\s|-]?[\d]{3}-?[\d]{4}Z/
-  validates :phone_number, presence: true, length: { is: 10 }, format: { with: REGEX }
+  #REGEX = /A\(?[\d]{3}\)?[\s|-]?[\d]{3}-?[\d]{4}Z/
+  validates :phone_number, presence: true, length: { is: 10 }
   validates :username, presence: true, uniqueness: true
   validates :password_digest, length: { minimum: 8 }, presence: true
 end

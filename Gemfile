@@ -54,6 +54,7 @@ group :development do
   gem 'web-console'
 
   gem 'webpacker'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
