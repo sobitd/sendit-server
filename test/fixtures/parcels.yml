@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recipient_address: MyString
+  recipient_name: MyString
+  recipient_contact: MyString
+  weight: 1
+  from: MyString
+  destination: MyString
+
+two:
+  recipient_address: MyString
+  recipient_name: MyString
+  recipient_contact: MyString
+  weight: 1
+  from: MyString
+  destination: MyString
