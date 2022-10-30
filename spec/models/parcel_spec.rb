@@ -18,4 +18,8 @@ RSpec.describe Parcel, type: :model do
   it 'phone number must be 10 characters' do
     expect(subject.recipient_contact).to eq(10)
   end
+
+  describe 'associations' do
+    it { expect(subject).to belong_to(:user) }
+  end
 end

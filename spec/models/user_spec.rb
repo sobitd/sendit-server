@@ -36,4 +36,8 @@ RSpec.describe User, type: :model do
   it 'phone number must be 10 characters' do
     expect(subject.phone_number).to eq(10)
   end
+
+  describe 'associations' do 
+    it { expect(subject).to have_many(:parcels)}
+  end
 end
