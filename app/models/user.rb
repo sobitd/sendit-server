@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :phone_number, presence: true, length: { is: 10 }, format: { with: REGEX }
   validates :username, presence: true, uniqueness: true
   validates :password_digest, length: { minimum: 8 }, presence: true
+  has_secure_password
 end
